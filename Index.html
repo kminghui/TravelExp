@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Travel Expense Computation</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Travel Expense Computation">
+  <meta name="author" content="Koh M.H.">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Travel Expense Computation</h1>
+    <h2>A simple data product to calculate travel expenses</h2>
+    <p>Koh M.H.<br/>Analyst</p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Background of this presentation</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>This is a course project for the module on &quot;Developing Data Products&quot;.  A shiny application on Travel Expense Computation has been created and deployed on Rstudio&#39;s servers. This presentation is a reproducible pitch presentation about the Travel Expense Computation application.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>What is the Travel Expense Computation about?</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The application is to facilitate the computation of travel expense for travellers in terms of transportation fees, accomodation fees as well as miscellaneous allowance. The user can input the amounts of these components and indicate the number of travellers. The application will then base on these inputs and compute the total travel expense for each traveller as well as the total travel expense for the total number of the travellers. It illustrates the following :</p>
+
+<ul>
+<li>use of widget inputs such as numeric input (indicate amounts) and slider (indicate number of travellers),</li>
+<li>computation of travel expense related inputs</li>
+<li>reactive output such as total travel expense per traveller as well as for the total number of travellers</li>
+<li>A brief explanation on the purpose and how to make use of the application.</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>How are the computation done?</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Below is an illustration of how the amounts are computed, based on defaulted amounts on the left side of the screen :</p>
+
+<pre><code class="r">transport_fee &lt;- 10; accomodation_fee &lt;- 50; misc_allowance &lt;- 20; Num_of_travellers &lt;- 1
+Total_Cost_per_traveller &lt;- transport_fee + accomodation_fee + misc_allowance
+Total_Cost_all_travellers &lt;- Total_Cost_per_traveller * Num_of_travellers
+</code></pre>
+
+<p>The results for the above will then be shown on the right side of the screen :</p>
+
+<pre><code class="r">Total_Cost_per_traveller
+</code></pre>
+
+<pre><code>## [1] 80
+</code></pre>
+
+<pre><code class="r">Total_Cost_all_travellers
+</code></pre>
+
+<pre><code>## [1] 80
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>How to access this application?</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The Travel Expense Computation application can be accessed <a href="https://kminghui.shinyapps.io/TravelExp">here</a></p>
+
+<p>This is the end of the presentation.</p>
+
+<p>Thank you.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Background of this presentation'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='What is the Travel Expense Computation about?'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='How are the computation done?'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='How to access this application?'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
